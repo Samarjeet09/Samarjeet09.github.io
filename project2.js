@@ -1,6 +1,6 @@
 add = document.getElementById("add");
 update = () => {
-  console.log("Sexy mama");
+//   console.log("Added");
   tit = document.getElementById("title").value;
   des = document.getElementById("Discription").value;
   if (tit != "" || des != "") {
@@ -52,7 +52,7 @@ onload = () => {
   }
 };
 function deletecrow(item) {
-  console.log("DElete");
+//   console.log("DElete");
   itemJsonArrayStr = localStorage.getItem("itemsJson");
   itemJsonArray = JSON.parse(itemJsonArrayStr);
   // delete item
