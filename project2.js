@@ -1,8 +1,7 @@
 add = document.getElementById("add");
 update = () => {
-//   console.log("Added");
   tit = document.getElementById("title").value;
-  des = document.getElementById("Discription").value;
+  des = document.getElementById("Description").value;
   if (tit != "" || des != "") {
     if (localStorage.getItem("itemsJson") == null) {
       itemJsonArray = [];
@@ -29,6 +28,8 @@ update = () => {
     });
     tablebody.innerHTML = str;
   }
+  clearDescription();
+  clearTitle();
 };
 add.addEventListener("click", update);
 onload = () => {
@@ -52,7 +53,7 @@ onload = () => {
   }
 };
 function deletecrow(item) {
-//   console.log("DElete");
+  console.log("DElete");
   itemJsonArrayStr = localStorage.getItem("itemsJson");
   itemJsonArray = JSON.parse(itemJsonArrayStr);
   // delete item
@@ -70,6 +71,18 @@ function cleared() {
     localStorage.clear();
     location.reload();
   }
+}
+Title = document.getElementById("remove_title");
+Title.addEventListener("click",clearTitle);
+function clearTitle(){
+  title = document.getElementById("title")
+  title.value = "";
+}
+Description = document.getElementById("remove_des");
+Description.addEventListener("click",clearDescription);
+function clearDescription(){
+  title = document.getElementById("Description")
+  title.value = "";
 }
 function about()
 {
