@@ -17,6 +17,16 @@
         background-color: #b5e48c;
         color: #168aad;
       }
+      table {
+            border-spacing: 0px;
+            table-layout: fixed;
+            margin-left: auto;
+            margin-right: auto;
+        }
+      td {
+            
+            word-wrap: break-word;
+        }
       #add{
         background-color: #184e77;
         width: 25%;
@@ -26,10 +36,25 @@
         position: absolute;
         margin:auto;
         left :67%;
-        background-color: #184e77;
+        background-color: red;
         width: 25%;
         font-size: large;
         
+      }
+      #remove_title{
+        position: relative;
+        margin:auto;
+        width: 15%;
+        left:6%;
+        
+        /* left : 40% */
+      }
+      #remove_des{
+        position: relative;
+        margin:auto;
+        width: 15%;
+        left:8%;
+        /* left : 55% */
       }
       .form-control{
         background-color: #d9ed92;
@@ -40,10 +65,11 @@
     <title>TO-DO LIST</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-collapse navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">TO-DO LIST</a>
+        <a class="navbar-brand" >TO-DO LIST</a>
         <button
+          
           class="navbar-toggler"
           id="main"
           type="button"
@@ -89,16 +115,21 @@
         <div id="emailHelp" class="form-text">Add an item to the List</div>
       </div>
       <div class="mb-3">
-        <label for="Description" class="form-label">Discription</label>
-        <textarea class="form-control" id="Discription" rows="3"></textarea>
+        <label for="Description" class="form-label">Description</label>
+        <textarea class="form-control" id="Description" rows="3"></textarea>
       </div>
       <button type="submit" id="add" class="btn btn-primary">
         Add to List
       </button>
-      <button type="submit" id="clear" class="btn btn-primary">
+      <button type="button" id="remove_title" class="btn btn-primary">
+        Clear Title
+      </button>
+      <button type="button" id="remove_des" class="btn btn-primary">
+        Clear Description
+      </button>
+      <button type="button" id="clear" class="btn btn-primary">
         Clear list
       </button>
-
       <div id="items" class="my-4">
         <h2>Your Items</h2>
         <table class="table table-dark table-striped">
